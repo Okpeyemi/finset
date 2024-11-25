@@ -27,11 +27,11 @@ const NavBar = () => {
             <a
               className={`cursor-pointer ${
                 pathname === link ? "bg-primary text-background" : "text-black"
-              } hover:bg-muted-foreground hover:text-background mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row`}
+              } ${label === "Help" ? "hover:text-white hover:bg-yellow-500" : "hover:text-white hover:bg-destructive"} hover:bg-muted-foreground hover:text-background mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row`}
               key={index}
               href={link}
             >
-              <span className="mr-5">{Icon && <Icon />}</span> {label}
+              <span className={`mr-5 `}>{Icon && <Icon />}</span> {label}
             </a>
           ))}
         </div>
