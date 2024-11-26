@@ -66,7 +66,7 @@ export const navbarBottom: NavItem[] = [
     keyword: "h"
   },
   {
-    label: "Log out",
+    label: "Log Out",
     link: "/logout",
     icon: LogOut,
     keyword: "l"

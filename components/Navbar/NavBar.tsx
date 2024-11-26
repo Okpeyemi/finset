@@ -23,17 +23,35 @@ const NavBar = () => {
           ))}
         </div>
         <div>
-          {navbarBottom.map(({ label, link, icon: Icon }, index) => (
-            <a
-              className={`cursor-pointer ${
-                pathname === link ? "bg-primary text-background" : "text-black"
-              } ${label === "Help" ? "hover:text-white hover:bg-yellow-500" : "hover:text-white hover:bg-destructive"} hover:bg-muted-foreground hover:text-background mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row`}
-              key={index}
-              href={link}
-            >
-              <span className={`mr-5 `}>{Icon && <Icon />}</span> {label}
-            </a>
-          ))}
+          {navbarBottom.map(({ label, link, icon: Icon }, index) => {
+            const isActive = pathname === link;
+            const baseClasses =
+              "cursor-pointer mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row";
+            const activeClasses = isActive
+              ? "bg-primary text-background"
+              : "text-black hover:bg-muted-foreground hover:text-background";
+            const labelSpecificClasses =
+              label === "Help"
+                ? "hover:text-white hover:bg-yellow-500"
+                : label === "Log Out"
+                ? "hover:text-white hover:bg-red-500"
+                : "text-red-500";
+
+            return (
+              <a
+                className={`${baseClasses} ${activeClasses} ${labelSpecificClasses}`}
+                key={index}
+                href={link}
+              >
+                {Icon && (
+                  <span className="mr-5">
+                    <Icon />
+                  </span>
+                )}{" "}
+                {label}
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
