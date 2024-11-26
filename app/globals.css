@@ -6,6 +6,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  @apply font-lufgaMedium text-[55px]
+}
+
+h2 {
+  @apply font-lufgaMedium text-[45px]
+}
+
+h3 {
+  @apply font-lufgaMedium text-[35px]
+}
+
+h4 {
+  @apply font-lufgaRegular text-[35px]
+}
+
+h5 {
+  @apply font-lufgaRegular text-[25px]
+}
+
+h6 {
+  @apply font-lufgaRegular text-[15px]
+}
+
+p {
+  @apply font-lufgaRegular text-[15px] text-border
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
