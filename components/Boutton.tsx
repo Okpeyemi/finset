@@ -17,7 +17,7 @@ const Boutton: React.FC<BouttonProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`font-lufgaRegular flex items-center p-4 bg-primary text-white w-fit rounded-full cursor-pointer ${className}`}
+      className={`font-lufgaRegular flex items-center px-4 py-3 text-white w-fit cursor-pointer ${className}`}
     >
       <Icon />
       {text}

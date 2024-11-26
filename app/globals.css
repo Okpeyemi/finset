@@ -31,7 +31,7 @@ h6 {
 }
 
 p {
-  @apply font-lufgaRegular text-[15px] text-border
+  @apply font-lufgaMedium text-[15px] text-border
 }
 
 @layer base {
