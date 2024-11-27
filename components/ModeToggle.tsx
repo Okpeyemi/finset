@@ -13,7 +13,7 @@ import { useState } from "react";
 
 const ModeToggle = () => {
   const { setTheme } = useTheme();
-  const [ currentTheme, setCurrentTheme ] = useState("")
+  const [ currentTheme, setCurrentTheme ] = useState("system")
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -29,19 +29,19 @@ const ModeToggle = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => {
-          setTheme("light"),
+          setTheme("light");
           setCurrentTheme("light")
         }}>
           Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => {
-          setTheme("dark"),
+          setTheme("dark");
           setCurrentTheme("dark")
         }}>
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => {
-          setTheme("system"),
+          setTheme("system");
           setCurrentTheme("system")
         }}>
           System
