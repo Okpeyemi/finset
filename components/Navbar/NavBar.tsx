@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { navbarTop, navbarBottom } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -10,10 +10,15 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import ModeToggle from "../ModeToggle";
 
 const NavBar = () => {
   const pathname = usePathname();
   const [navToggle, setNavToggle] = useState(true);
+
+  useEffect(() => {
+    setNavToggle(true)
+  }, [])
 
   return (
     <div
@@ -70,6 +75,7 @@ const NavBar = () => {
             </TooltipProvider>
           </div>
         </div>
+        <div className="flex flex-col h-[200px] justify-between">
         <div>
           <TooltipProvider>
             {navbarBottom.map(({ label, link, icon: Icon }, index) => {
@@ -83,8 +89,8 @@ const NavBar = () => {
                 label === "Help"
                   ? "hover:text-white hover:bg-warning"
                   : label === "Log Out"
-                  ? "hover:text-white hover:bg-destructive"
-                  : "text-destructive";
+                  ? "hover:text-white hover:bg-[#E83838]"
+                  : "";
 
               return (
                 <Tooltip key={index}>
@@ -109,6 +115,8 @@ const NavBar = () => {
               );
             })}
           </TooltipProvider>
+        </div>
+        <ModeToggle navToggle={navToggle} />
         </div>
       </div>
     </div>

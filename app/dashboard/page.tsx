@@ -29,7 +29,7 @@ const page = () => {
               className="border border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary"
               Icon={Bell}
             />
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <div className="max-xl:hidden">
             <div className="flex border border-border text-foreground rounded-[10px] items-center px-2 cursor-pointer">
               <Profil />

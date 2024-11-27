@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/ThemeContext";
 
 const LufgaMedium = localFont({
   src: "./fonts/LufgaMedium.woff",
@@ -29,12 +29,7 @@ export default function RootLayout({
       <body
         className={`${LufgaMedium.variable} ${LufgaRegular.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           {children}
         </ThemeProvider>
       </body>
