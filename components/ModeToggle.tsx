@@ -9,16 +9,18 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useState } from "react";
 
 const ModeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
+  const [ currentTheme, setCurrentTheme ] = useState("")
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div className="border px-4 py-3 border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary cursor-pointer">
-          {theme === "Light" ? (
+          {currentTheme === "Light" ? (
             <Sun className="h-6 w-6" />
-          ) : theme === "Dark" ? (
+          ) : currentTheme === "Dark" ? (
             <Moon className="h-6 w-6" />
           ) : (
             <SunMoon className="h-6 w-6" />
@@ -26,13 +28,22 @@ const ModeToggle = () => {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => {
+          setTheme("light"),
+          setCurrentTheme("light")
+        }}>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => {
+          setTheme("dark"),
+          setCurrentTheme("dark")
+        }}>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => {
+          setTheme("system"),
+          setCurrentTheme("system")
+        }}>
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

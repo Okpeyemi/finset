@@ -30,10 +30,9 @@ const NavBarMobile = () => {
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             {navbarTop.map(({ label, link, icon: Icon, keyword }, index) => (
-              <DropdownMenuItem>
+              <DropdownMenuItem key={index}>
                 <a
                   className="flex items-center justify-between w-full"
-                  key={index}
                   href={link}
                 >
                   <span className="mr-5">{Icon && <Icon />}</span> {label}
@@ -46,7 +45,7 @@ const NavBarMobile = () => {
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           {navbarBottom.map(({ label, link, icon: Icon, keyword }, index) => (
-            <DropdownMenuItem>
+            <DropdownMenuItem key={index}>
               <a
                 className={`flex items-center justify-between w-full ${
                   label === "Help"
@@ -55,7 +54,6 @@ const NavBarMobile = () => {
                     ? "text-destructive hover:text-foreground"
                     : ""
                 }`}
-                key={index}
                 href={link}
               >
                 <span className="mr-5">{Icon && <Icon />}</span> {label}
