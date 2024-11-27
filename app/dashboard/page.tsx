@@ -1,40 +1,45 @@
 import Boutton from "@/components/Boutton";
 import Card from "@/components/Card";
 import Chart from "@/components/Chart";
+import ModeToggle from "@/components/ModeToggle";
 import NavBar from "@/components/Navbar/NavBar";
+import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Profil from "@/components/Profil";
-// import { Calendar } from "@/components/ui/calendar";
 import { Bell, CalendarDays, LayoutGrid, Search } from "lucide-react";
 import React from "react";
 
 const page = () => {
   return (
-    <div className="flex">
+    <div className="flex h-screen">
       <NavBar />
-      <div className="mx-5 my-5 w-full">
-        <div className="flex items-center justify-between">
+      <div className="mx-5 my-5 w-full overflow-y-scroll">
+        <div className="flex items-start justify-between">
           <div>
-            <h1>Welcome back, Maqsoud!</h1>
-            <h5 className="text-[#82828C]">
+            <h1 className="max-xl:text-[45px]">Welcome back, Maqsoud!</h1>
+            <h5 className="text-[#82828C]max-xl:text-[15px]">
               It is the best time to manage your finances
             </h5>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             <Boutton
-              className="border border-border text-foreground rounded-full mr-2 hover:bg-muted hover:border-secondary"
+              className="border border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary"
               Icon={Search}
             />
             <Boutton
-              className="border border-border text-foreground rounded-full mr-2 hover:bg-muted hover:border-secondary"
+              className="border border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary"
               Icon={Bell}
             />
-            <div className="flex border border-border text-foreground rounded-full items-center px-1">
+            <ModeToggle />
+            <div className="max-xl:hidden">
+            <div className="flex border border-border text-foreground rounded-[10px] items-center px-2 cursor-pointer">
               <Profil />
-              <div className="mx-3">
+              <div className="mx-3 my-[2px]">
                 <h6>Maqsoud TAWALIOU</h6>
                 <p>maqsoudt9@gmail.com</p>
               </div>
             </div>
+            </div>
+            <NavBarMobile />
           </div>
         </div>
         <div className="flex justify-between">
@@ -94,9 +99,7 @@ const page = () => {
           <div className="w-[70%]">
             <Chart />
           </div>
-          <div className="w-[30%]">
-
-          </div>
+          <div className="w-[30%]"></div>
         </div>
       </div>
     </div>

@@ -7,14 +7,14 @@ import { usePathname } from "next/navigation";
 const NavBar = () => {
   const pathname = usePathname();
   return (
-    <div className="w-[400px] flex col bg-muted justify-between h-screen font-lufgaMedium">
+    <div className="w-[400px] max-xl:w-[300px] flex col bg-muted justify-between h-screen font-lufgaMedium">
       <div className="flex flex-col justify-between w-full mx-5 my-10">
         <div>
           {navbarTop.map(({ label, link, icon: Icon }, index) => (
             <a
               className={`cursor-pointer ${
-                pathname === link ? "bg-primary text-background" : "text-black"
-              } hover:bg-muted-foreground hover:text-background mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row`}
+                pathname === link ? "bg-primary text-white" : "text-foreground"
+              } hover:bg-secondary hover:text-foreground mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row`}
               key={index}
               href={link}
             >
@@ -28,8 +28,8 @@ const NavBar = () => {
             const baseClasses =
               "cursor-pointer mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row";
             const activeClasses = isActive
-              ? "bg-primary text-background"
-              : "text-black hover:bg-muted-foreground hover:text-background";
+              ? "bg-primary text-foreground"
+              : "text-foreground hover:bg-secondary hover:text-foreground";
             const labelSpecificClasses =
               label === "Help"
                 ? "hover:text-white hover:bg-warning"

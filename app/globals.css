@@ -64,8 +64,8 @@ p {
   .dark {
     --background: 240 5.56% 7.06%;
     --foreground: 210 20% 98%;
-    --muted: 240 4.44% 35.29%;
-    --muted-foreground: 240 4.17% 52.94%;
+    --muted: 240 5.56% 14.12%;
+    --muted-foreground: 240 3.7% 21.18%;
     --popover: 240 5.56% 14.12%;
     --popover-foreground: 210 20% 98%;
     --card: 240 5.56% 7.06%;
@@ -76,8 +76,8 @@ p {
     --primary-foreground: 210 20% 98%;
     --secondary: 246.67 100% 85.88%;
     --secondary-foreground: 210 20% 98%;
-    --accent: 245.71 100% 95.88%;
-    --accent-foreground: 245.45 100% 97.84%;
+    --accent: 246.67 100% 85.88%;
+    --accent-foreground: 220.9 39.3% 11%;
     --success: 126.59 50% 32.16%;
     --success-foreground: 122.86 67.74% 93.92%;
     --destructive: 0 79.28% 56.47%;
