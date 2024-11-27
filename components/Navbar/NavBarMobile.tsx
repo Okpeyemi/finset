@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { navbarBottom, navbarTop } from "@/lib/utils";
 import Boutton from "../Boutton";
-import { Bell, Menu, User } from "lucide-react";
+import { Menu, User } from "lucide-react";
 
 const NavBarMobile = () => {
 
