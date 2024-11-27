@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,23 +10,24 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Profil from "../Profil";
 import { navbarBottom, navbarTop } from "@/lib/utils";
+import Boutton from "../Boutton";
+import { Bell, Menu, User } from "lucide-react";
 
 const NavBarMobile = () => {
+
   return (
-    <div className="xl:hidden">
+    <div className="lg:hidden">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <div className="flex border border-border text-foreground rounded-[10px] items-center px-2 cursor-pointer">
-            <Profil />
-            <div className="mx-3 my-[2px]">
-              <h6>Maqsoud TAWALIOU</h6>
-              <p>maqsoudt9@gmail.com</p>
-            </div>
+          <div>
+            <Boutton
+              className="border border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary"
+              Icon={Menu}
+            />
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-[250px]">
+        <DropdownMenuContent className="w-[250px] mr-7">
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             {navbarTop.map(({ label, link, icon: Icon, keyword }, index) => (
@@ -37,11 +38,27 @@ const NavBarMobile = () => {
                 >
                   <span className="mr-5">{Icon && <Icon />}</span> {label}
                   <DropdownMenuShortcut>
-                    Ctrl{keyword} | ⌘{keyword}
+                    Ctrl+{keyword} | ⌘+{keyword}
                   </DropdownMenuShortcut>
                 </a>
               </DropdownMenuItem>
             ))}
+          </DropdownMenuGroup>
+          <DropdownMenuSeparator />
+          <DropdownMenuGroup>
+            <DropdownMenuItem>
+              <a
+                className="flex items-center justify-between w-full"
+                href="/profil"
+              >
+                {" "}
+                <span className="mr-5">
+                  <User />
+                </span>{" "}
+                Profil
+                <DropdownMenuShortcut>Ctrl+p | ⌘+p</DropdownMenuShortcut>
+              </a>
+            </DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           {navbarBottom.map(({ label, link, icon: Icon, keyword }, index) => (
@@ -58,7 +75,7 @@ const NavBarMobile = () => {
               >
                 <span className="mr-5">{Icon && <Icon />}</span> {label}
                 <DropdownMenuShortcut>
-                  Ctrl{keyword} | ⌘{keyword}
+                  Ctrl+{keyword} | ⌘+{keyword}
                 </DropdownMenuShortcut>
               </a>
             </DropdownMenuItem>

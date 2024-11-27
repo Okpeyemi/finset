@@ -24,7 +24,7 @@ const NavBar = () => {
     <div
       className={`${
         navToggle ? "w-[400px]" : "w-fit"
-      } max-xl:w-[300px] flex col bg-muted justify-between h-screen font-lufgaMedium transition-all duration-300 ease-in-out`}
+      } max-md:w-[300px] hidden lg:flex col bg-muted justify-between h-screen font-lufgaMedium transition-all duration-300 ease-in-out`}
     >
       <div className="flex flex-col justify-between w-full mx-5 my-10">
         <div>
@@ -75,7 +75,7 @@ const NavBar = () => {
             </TooltipProvider>
           </div>
         </div>
-        <div className="flex flex-col h-[200px] justify-between">
+        <div className={`flex flex-col h-[200px] justify-between ${navToggle ? "" : "items-center"}`}>
         <div>
           <TooltipProvider>
             {navbarBottom.map(({ label, link, icon: Icon }, index) => {

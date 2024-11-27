@@ -13,7 +13,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ title, price, valuePercentage, vs, className="" }) => {
   return (
-    <div className={`flex justify-between rounded-[10px] border border-border p-1 hover:bg-popover hover:border-secondary max-lg:wrap ${className}`}>
+    <div className={`flex justify-between w-full rounded-[10px] border border-border p-1 hover:bg-popover hover:border-secondary max-lg:wrap ${className}`}>
       <div className="m-3">
         <h5 className="font-lufgaMedium mb-5">{title}</h5>
         <h3 className="my-2">${price}</h3>

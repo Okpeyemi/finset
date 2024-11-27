@@ -21,8 +21,8 @@ export const chartConfig = {
 
 const Chart = () => {
   return (
-    <div className="border border-border rounded-[10px] p-5 my-5">
-      <div className="flex my-3 items-center justify-between">
+    <div className="border border-border rounded-[10px] w-full p-5 my-5">
+      <div className="flex my-3 items-center justify-between max-sm:flex-col">
         <h5 className="font-lufgaMedium">Money flow</h5>
         <div className="flex gap-2">
             <Dropdown
@@ -39,9 +39,10 @@ const Chart = () => {
             />
         </div>
       </div>
+      <div className="w-full overflow-x-auto">
       <ChartContainer
         config={chartConfig}
-        className="max-h-[300px] w-full font-lufgaRegular"
+        className="max-h-[300px] md:max-h-[200px] w-full font-lufgaRegular max-sm:w-[700px]"
       >
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
@@ -64,16 +65,17 @@ const Chart = () => {
             dataKey="income"
             fill="var(--color-income)"
             radius={10}
-            barSize={40}
+            barSize={30}
           />
           <Bar
             dataKey="expense"
             fill="var(--color-expense)"
             radius={10}
-            barSize={40}
+            barSize={30}
           />
         </BarChart>
       </ChartContainer>
+      </div>
     </div>
   );
 };
