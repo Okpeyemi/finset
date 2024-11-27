@@ -13,14 +13,14 @@ import { useState } from "react";
 
 const ModeToggle = () => {
   const { setTheme } = useTheme();
-  const [ currentTheme, setCurrentTheme ] = useState("system")
+  const [ currentTheme, setCurrentTheme ] = useState("")
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div className="border px-4 py-3 border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary cursor-pointer">
-          {currentTheme === "Light" ? (
+          {currentTheme === "light" ? (
             <Sun className="h-6 w-6" />
-          ) : currentTheme === "Dark" ? (
+          ) : currentTheme === "dark" ? (
             <Moon className="h-6 w-6" />
           ) : (
             <SunMoon className="h-6 w-6" />

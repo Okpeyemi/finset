@@ -10,9 +10,9 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-y-auto">
       <NavBar />
-      <div className="mx-5 my-5 w-full overflow-y-scroll">
+      <div className="mx-5 my-5 w-full">
         <div className="flex items-start justify-between">
           <div>
             <h1 className="max-xl:text-[45px]">Welcome back, Maqsoud!</h1>
