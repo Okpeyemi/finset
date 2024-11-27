@@ -42,7 +42,7 @@ const NavBar = () => {
                         pathname === link
                           ? "bg-primary text-white"
                           : "text-foreground"
-                      } hover:bg-secondary hover:text-foreground mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row transition-all duration-300 ease-in-out`}
+                      } ${navToggle ? "w-full" : "w-fit"} hover:bg-secondary hover:text-foreground mx-1 my-1 p-[10px] rounded-[10px] items-center flex flex-row transition-all duration-300 ease-in-out`}
                       key={index}
                       href={link}
                     >
@@ -90,7 +90,7 @@ const NavBar = () => {
                 <Tooltip key={index}>
                   <TooltipTrigger className="flex flex-col w-full">
                     <a
-                      className={`${baseClasses} ${activeClasses} ${labelSpecificClasses}`}
+                      className={`${baseClasses} ${activeClasses} ${labelSpecificClasses}  ${navToggle ? "w-full" : "w-fit"} `}
                       key={index}
                       href={link}
                     >
