@@ -1,9 +1,10 @@
 import Boutton from "@/components/Boutton";
 import Card from "@/components/Card";
+import Chart from "@/components/Chart";
 import NavBar from "@/components/Navbar/NavBar";
 import Profil from "@/components/Profil";
 // import { Calendar } from "@/components/ui/calendar";
-import { Bell, CalendarDays, Search } from "lucide-react";
+import { Bell, CalendarDays, LayoutGrid, Search } from "lucide-react";
 import React from "react";
 
 const page = () => {
@@ -20,14 +21,14 @@ const page = () => {
           </div>
           <div className="flex">
             <Boutton
-              className="border-2 border-border text-foreground rounded-full mr-2"
+              className="border border-border text-foreground rounded-full mr-2 hover:bg-muted hover:border-secondary"
               Icon={Search}
             />
             <Boutton
-              className="border-2 border-border text-foreground rounded-full mr-2"
+              className="border border-border text-foreground rounded-full mr-2 hover:bg-muted hover:border-secondary"
               Icon={Bell}
             />
-            <div className="flex border-2 border-border text-foreground rounded-full items-center px-1">
+            <div className="flex border border-border text-foreground rounded-full items-center px-1">
               <Profil />
               <div className="mx-3">
                 <h6>Maqsoud TAWALIOU</h6>
@@ -38,28 +39,64 @@ const page = () => {
         </div>
         <div className="flex justify-between">
           <div className="flex my-5">
-            <div className="px-4 py-3 border-2 border-border w-fit rounded-[10px] mr-2">
-              <CalendarDays />
-            </div>
-            <div className="px-4 py-3 border-2 border-border w-fit rounded-[10px]">
-              <h6>This month</h6>
-            </div>
+            <Boutton
+              className="border border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary"
+              Icon={CalendarDays}
+            />
+            <Boutton
+              className="border border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary"
+              text="This month"
+            />
           </div>
           <div className="flex my-5 items-center">
-            <div className="px-4 py-3 border-2 border-border w-fit rounded-[10px] mr-2">
-              <h6>This month</h6>
-            </div>
             <Boutton
-              className="bg-primary rounded-[10px]"
+              className="rounded-[10px] text-foreground border border-border mr-2 hover:bg-muted hover:border-secondary"
+              text="Manage widgets"
+              Icon={LayoutGrid}
+            />
+            <Boutton
+              className="bg-primary rounded-[10px] text-white border border-primary hover:bg-secondary hover:border-secondary"
               text="Add new widget"
             />
           </div>
         </div>
-        <div className="flex justify-between">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="flex gap-4 justify-between w-full">
+          <Card
+            className="w-full"
+            title="Total balance"
+            price="15,700.00"
+            valuePercentage="12.1%"
+            vs="vs last month"
+          />
+          <Card
+            className="w-full"
+            title="Total balance"
+            price="15,700.00"
+            valuePercentage="12.1%"
+            vs="vs last month"
+          />
+          <Card
+            className="w-full"
+            title="Total balance"
+            price="15,700.00"
+            valuePercentage="12.1%"
+            vs="vs last month"
+          />
+          <Card
+            className="w-full"
+            title="Total balance"
+            price="15,700.00"
+            valuePercentage="12.1%"
+            vs="vs last month"
+          />
+        </div>
+        <div className="w-full gap-2">
+          <div className="w-[70%]">
+            <Chart />
+          </div>
+          <div className="w-[30%]">
+
+          </div>
         </div>
       </div>
     </div>

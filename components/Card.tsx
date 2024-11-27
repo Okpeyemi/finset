@@ -3,20 +3,28 @@ import Badge from "./Badge";
 import Boutton from "./Boutton";
 import { ArrowUpRight } from "lucide-react";
 
-const Card = () => {
+type CardProps = {
+  title: string;
+  price: string;
+  valuePercentage: string;
+  vs: string;
+  className?: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, price, valuePercentage, vs, className="" }) => {
   return (
-    <div className="flex w-[400px] justify-between rounded-[30px] border-2 border-border p-1">
+    <div className={`flex justify-between rounded-[10px] border border-border p-1 hover:bg-popover hover:border-secondary ${className}`}>
       <div className="m-3">
-        <h5 className="font-lufgaMedium mb-5">Total balance</h5>
-        <h3 className="my-2">$15,700.00</h3>
+        <h5 className="font-lufgaMedium mb-5">{title}</h5>
+        <h3 className="my-2">${price}</h3>
         <div className="flex items-center">
-          <Badge text="12.1%" />
-          <p className="ml-2">vs last month</p>
+          <Badge text={valuePercentage} />
+          <p className="ml-2">{vs}</p>
         </div>
       </div>
       <div>
         <Boutton
-          className="border-2 border-border text-foreground rounded-full"
+          className="border border-border text-foreground rounded-[10px] m-2 hover:bg-primary hover:border-primary hover:text-white"
           Icon={ArrowUpRight}
         />
       </div>

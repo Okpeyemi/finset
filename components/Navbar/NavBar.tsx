@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const NavBar = () => {
   const pathname = usePathname();
   return (
-    <div className="w-[256px] flex col bg-muted justify-between h-screen font-lufgaMedium">
+    <div className="w-[400px] flex col bg-muted justify-between h-screen font-lufgaMedium">
       <div className="flex flex-col justify-between w-full mx-5 my-10">
         <div>
           {navbarTop.map(({ label, link, icon: Icon }, index) => (
@@ -32,7 +32,7 @@ const NavBar = () => {
               : "text-black hover:bg-muted-foreground hover:text-background";
             const labelSpecificClasses =
               label === "Help"
-                ? "hover:text-white hover:bg-yellow-500"
+                ? "hover:text-white hover:bg-warning"
                 : label === "Log Out"
                 ? "hover:text-white hover:bg-red-500"
                 : "text-red-500";

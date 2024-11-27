@@ -8,7 +8,7 @@ type BadgeProps = {
 
 const Badge: React.FC<BadgeProps> = ({ text, Icon = MoveUp }) => {
   return (
-    <div className="bg-accent-foreground text-accent flex w-fit items-center px-2 py-1 text-[15px] rounded-full">
+    <div className="bg-success-foreground text-success flex w-fit items-center px-2 py-1 text-[15px] rounded-full">
       <Icon className="w-[15px] h-[15px]" />
       {text}
     </div>
