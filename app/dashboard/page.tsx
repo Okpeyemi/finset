@@ -1,7 +1,6 @@
 import Boutton from "@/components/Boutton";
 import Card from "@/components/Card";
 import Chart from "@/components/Chart";
-import ModeToggle from "@/components/ModeToggle";
 import NavBar from "@/components/Navbar/NavBar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Profil from "@/components/Profil";
@@ -29,7 +28,6 @@ const page = () => {
               className="border border-border text-foreground rounded-[10px] mr-2 hover:bg-muted hover:border-secondary"
               Icon={Bell}
             />
-            {/* <ModeToggle /> */}
             <div className="max-xl:hidden">
             <div className="flex border border-border text-foreground rounded-[10px] items-center px-2 cursor-pointer">
               <Profil />
