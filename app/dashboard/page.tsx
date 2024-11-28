@@ -5,6 +5,7 @@ import ModeToggleMobile from "@/components/ModeToggleMobile";
 import NavBar from "@/components/Navbar/NavBar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Profil from "@/components/Profil";
+import RadioChart from "@/components/RadioChart";
 import { Bell, CalendarDays, LayoutGrid, Plus, Search } from "lucide-react";
 import React from "react";
 
@@ -71,41 +72,47 @@ const page = () => {
               />
             </div>
           </div>
-          <div className="flex gap-1 justify-between w-full flex-wrap">
+          <div className="flex gap-4 md:gap-[14px] lg:gap-3 xl:gap-1 justify-between w-full flex-wrap">
             <Card
               className="xl:w-[24%] md:w-[49%]"
               title="Total balance"
               price="15,700.00"
               valuePercentage="12.1%"
               vs="vs last month"
+              className2="bg-success-foreground text-success"
             />
             <Card
               className="xl:w-[24%] md:w-[49%]"
-              title="Total balance"
-              price="15,700.00"
-              valuePercentage="12.1%"
+              title="Income"
+              price="8,500.00"
+              valuePercentage="6.3%"
               vs="vs last month"
+              className2="bg-success-foreground text-success"
             />
             <Card
               className="xl:w-[24%] md:w-[49%]"
-              title="Total balance"
-              price="15,700.00"
-              valuePercentage="12.1%"
+              title="Expense"
+              price="6,222.00"
+              valuePercentage="2.4%"
               vs="vs last month"
+              className2="bg-destructive-foreground text-destructive"
             />
             <Card
               className="xl:w-[24%] md:w-[49%]"
-              title="Total balance"
-              price="15,700.00"
+              title="Total savings"
+              price="32,913.00"
               valuePercentage="12.1%"
               vs="vs last month"
+              className2="bg-success-foreground text-success"
             />
           </div>
-          <div className="w-full gap-2">
+          <div className="flex max-sm:flex-col w-full gap-4 my-5 max-h-[450px]">
             <div className="w-[65%] max-md:w-[60%] max-sm:w-full">
               <Chart />
             </div>
-            <div className="w-[35%] max-md:w-[30%] max-sm:w-full"></div>
+            <div className="w-[35%] max-md:w-[30%] max-sm:w-full">
+              <RadioChart />
+            </div>
           </div>
         </div>
       </div>

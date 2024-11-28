@@ -85,18 +85,20 @@ const NavBar = () => {
               const activeClasses = isActive
                 ? "bg-primary text-foreground"
                 : "text-foreground hover:bg-secondary hover:text-foreground";
-              const labelSpecificClasses =
-                label === "Help"
-                  ? "hover:text-white hover:bg-warning"
-                  : label === "Log Out"
-                  ? "hover:text-white hover:bg-[#E83838]"
-                  : "";
-
+              // const labelSpecificClasses =
+              //   label === "Help"
+              //     ? "text-warning"
+              //     : "";
+              // const labelSpecificClasses1 = 
+              //   link === "/logout"
+              //       ? "text-[#E83838]"
+              //       : ""
+                    
               return (
                 <Tooltip key={index}>
                   <TooltipTrigger className="flex flex-col w-full">
                     <a
-                      className={`${baseClasses} ${activeClasses} ${labelSpecificClasses}  ${navToggle ? "w-full" : "w-fit"} `}
+                      className={`${baseClasses} ${activeClasses} ${navToggle ? "w-full" : "w-fit"} `}
                       key={index}
                       href={link}
                     >

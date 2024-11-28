@@ -21,7 +21,7 @@ export const chartConfig = {
 
 const Chart = () => {
   return (
-    <div className="border border-border rounded-[10px] w-full p-5 my-5">
+    <div className="border border-border rounded-[10px] w-full p-5 h-full">
       <div className="flex my-3 items-center justify-between max-sm:flex-col">
         <h5 className="font-lufgaMedium">Money flow</h5>
         <div className="flex gap-2">
