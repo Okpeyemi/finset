@@ -97,23 +97,24 @@ const RadioChart = () => {
               />
               <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
                 <Label
+                className="font-lufgaMedium flex"
                   content={({ viewBox }) => {
                     if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                       return (
                         <text x={viewBox.cx} y={viewBox.cy} textAnchor="middle">
+                        <tspan
+                          x={viewBox.cx}
+                          y={(viewBox.cy || 0) + 4}
+                          className="fill-muted-foreground font-lufgaRegular"
+                        >
+                          Total for month
+                        </tspan>
                           <tspan
                             x={viewBox.cx}
                             y={(viewBox.cy || 0) - 16}
-                            className="fill-primary text-2xl font-bold"
+                            className="fill-primary text-2xl font-lufgaMedium"
                           >
-                            {totalVisitors.toLocaleString()}
-                          </tspan>
-                          <tspan
-                            x={viewBox.cx}
-                            y={(viewBox.cy || 0) + 4}
-                            className="fill-muted-foreground"
-                          >
-                            Visitors
+                            ${totalVisitors.toLocaleString()}.00
                           </tspan>
                         </text>
                       );
