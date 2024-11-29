@@ -9,10 +9,10 @@ import {
 import { ChevronDown } from 'lucide-react'
 
 type DropdownProps = {
-    title: string;
-    text1: string;
-    text2: string;
-    text3: string;
+    title?: string;
+    text1?: string;
+    text2?: string;
+    text3?: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({ title, text1, text2, text3 }) => {

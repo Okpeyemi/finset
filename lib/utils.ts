@@ -1,5 +1,8 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import TripAdvisor from "@/app/images/tripadvisor.png";
+import Youtube from "@/app/images/youtube.png";
+import LinkedIn from "@/app/images/linkedin.png";
 import {
   LayoutDashboard,
   ArrowLeftRight,
@@ -92,3 +95,33 @@ export const chartData = [
   { month: "Jun", income: 9000, expense: 6000 },
   { month: "Jul", income: 8000, expense: 7000 },
 ];
+
+export const transactions = [
+  {
+    paymentId: "01",
+    paymentDate: "25 Jul 12:30",
+    paymentAmount: "-$10",
+    paymentImage: Youtube.src,
+    paymentName: "Youtube",
+    paymentMethod: "VISA **3254",
+    paymentCategory: "Subscription",
+  },
+  {
+    paymentId: "02",
+    paymentDate: "26 Jul 15:00",
+    paymentAmount: "-$150",
+    paymentImage: TripAdvisor.src,
+    paymentName: "TripAdvisor",
+    paymentMethod: "Mastercard **2154",
+    paymentCategory: "Reservation",
+  },
+  {
+    paymentId: "03",
+    paymentDate: "27 Jul 9:00",
+    paymentAmount: "-$80",
+    paymentImage: LinkedIn.src,
+    paymentName: "LinkedIn",
+    paymentMethod: "Mastercard **2154",
+    paymentCategory: "Subscription",
+  }
+]

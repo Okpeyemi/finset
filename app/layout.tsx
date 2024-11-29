@@ -17,6 +17,9 @@ const LufgaRegular = localFont({
 export const metadata: Metadata = {
   title: "FinSet",
   description: "Web App for finance management",
+  icons: {
+    icon: "/favicon.ico"
+  }
 };
 
 export default function RootLayout({

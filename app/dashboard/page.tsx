@@ -1,11 +1,13 @@
 import Boutton from "@/components/Boutton";
 import Card from "@/components/Card";
 import Chart from "@/components/Chart";
+import Goals from "@/components/Goals";
 import ModeToggleMobile from "@/components/ModeToggleMobile";
 import NavBar from "@/components/Navbar/NavBar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Profil from "@/components/Profil";
 import RadioChart from "@/components/RadioChart";
+import Transactions from "@/components/Transactions";
 import { Bell, CalendarDays, LayoutGrid, Plus, Search } from "lucide-react";
 import React from "react";
 
@@ -17,7 +19,9 @@ const page = () => {
         <div className="mx-5 my-5">
           <div className="flex max-sm:flex-col-reverse md:items-start justify-between">
             <div>
-              <h1 className="xl:text-[45px] lg:text-[35px] text-[25px]">Welcome back, Maqsoud!</h1>
+              <h1 className="xl:text-[45px] lg:text-[35px] text-[25px]">
+                Welcome back, Maqsoud!
+              </h1>
               <h5 className="text-[#82828C] max-xl:text-[15px]">
                 It is the best time to manage your finances
               </h5>
@@ -110,8 +114,30 @@ const page = () => {
             <div className="w-[65%] max-md:w-[60%] max-sm:w-full">
               <Chart />
             </div>
-            <div className="w-[35%] max-md:w-[30%] max-sm:w-full">
+            <div className="w-[35%] max-sm:w-full">
               <RadioChart />
+            </div>
+          </div>
+          <div className="flex flex-col max-sm:mt-[210px] w-full gap-4 my-5">
+            <div className="w-full">
+              <Transactions />
+            </div>
+            <div className="w-full">
+              <Goals
+                title="Saving goals"
+                subtitle1="MacBook Pro"
+                subtitle2="New car"
+                subtitle3="New house"
+                subtitle4="Land"
+                percentage1={25}
+                percentage2={42}
+                percentage3={3}
+                percentage4={17}
+                price1="1,650"
+                price2="60,000"
+                price3="150,000"
+                price4="500,000"
+              />
             </div>
           </div>
         </div>
