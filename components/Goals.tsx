@@ -18,7 +18,6 @@ type GoalsProps = {
   price3?: string;
   price4?: string;
   className?: string;
-  className2?: string;
 };
 
 const Goals: React.FC<GoalsProps> = ({
@@ -36,7 +35,6 @@ const Goals: React.FC<GoalsProps> = ({
   price3,
   price4,
   className = "",
-  className2 = "",
 }) => {
   return (
     <div
