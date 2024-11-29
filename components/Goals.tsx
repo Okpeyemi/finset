@@ -1,5 +1,4 @@
 import React from "react";
-import Badge from "./Badge";
 import Boutton from "./Boutton";
 import { ArrowUpRight } from "lucide-react";
 import { Progress } from "./ui/progress";
