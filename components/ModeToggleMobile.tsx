@@ -24,7 +24,7 @@ const ModeToggleMobile = () => {
   }
 
   return (
-    <div className="items-center hidden max-sm:flex mr-2">
+    <div className="items-center hidden max-lg:flex mr-2">
       <Switch
           checked={enabled}
           onChange={handleToggle}
