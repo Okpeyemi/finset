@@ -17,30 +17,30 @@ const GoalsCard = () => {
         />
         <GoalCard
           className="xl:w-[24%] md:w-[49%]"
-          title="MacBook Pro"
-          price="412.50"
-          valuePercentage={25}
-          dueDate="7 Oct 2024"
-          goalPrice="1,650"
-          leftToGoal="1,237.50"
+          title="New car"
+          price="25,000.50"
+          valuePercentage={42}
+          dueDate="25 Sep 2025"
+          goalPrice="60,000"
+          leftToGoal="34,999.50"
         />
         <GoalCard
           className="xl:w-[24%] md:w-[49%]"
-          title="MacBook Pro"
-          price="412.50"
-          valuePercentage={25}
-          dueDate="7 Oct 2024"
+          title="New house"
+          price="5,000.50"
+          valuePercentage={3}
+          dueDate="20 Apr 2027"
           goalPrice="1,650"
-          leftToGoal="1,237.50"
+          leftToGoal="145,000.50"
         />
         <GoalCard
           className="xl:w-[24%] md:w-[49%]"
-          title="MacBook Pro"
-          price="412.50"
-          valuePercentage={25}
+          title="Vocation"
+          price="2,500.50"
+          valuePercentage={71}
           dueDate="7 Oct 2024"
-          goalPrice="1,650"
-          leftToGoal="1,237.50"
+          goalPrice="3,500"
+          leftToGoal="1,000.00"
         />
       </div>
     </div>

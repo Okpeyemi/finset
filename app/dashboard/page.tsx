@@ -128,15 +128,15 @@ const page = () => {
                 subtitle1="MacBook Pro"
                 subtitle2="New car"
                 subtitle3="New house"
-                subtitle4="Land"
+                subtitle4="Vocation"
                 percentage1={25}
                 percentage2={42}
                 percentage3={3}
-                percentage4={17}
+                percentage4={71}
                 price1="1,650"
                 price2="60,000"
                 price3="150,000"
-                price4="500,000"
+                price4="3,500"
               />
             </div>
           </div>
