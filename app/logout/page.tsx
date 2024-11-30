@@ -1,10 +1,7 @@
 import React from "react";
 import FinSet from "@/app/images/FinSet.png";
 import Image from "next/image";
-import ModeToggleMobile from "@/components/ModeToggleMobile";
 import Boutton from "@/components/Boutton";
-import { Bell, Search } from "lucide-react";
-import Profil from "@/components/Profil";
 import onBuilding from "@/app/images/onBuilding.svg";
 
 const page = () => {
