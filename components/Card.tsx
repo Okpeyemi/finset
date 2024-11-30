@@ -1,7 +1,7 @@
 import React from "react";
 import Badge from "./Badge";
 import Boutton from "./Boutton";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MoveUp } from "lucide-react";
 
 type CardProps = {
   title: string;
@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ title, price, valuePercentage, vs, classNam
         <h5 className="font-lufgaMedium mb-5">{title}</h5>
         <h3 className="my-2 lg:w-[150px]">${price}</h3>
         <div className="flex items-center">
-          <Badge text={valuePercentage} className={className2} />
+          <Badge text={valuePercentage} className={className2} Icon={MoveUp} />
           <p className="ml-2">{vs}</p>
         </div>
       </div>

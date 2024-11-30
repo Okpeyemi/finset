@@ -1,4 +1,3 @@
-import { MoveUp } from "lucide-react";
 import React from "react";
 
 type BadgeProps = {
@@ -7,10 +6,10 @@ type BadgeProps = {
   className?: string;
 };
 
-const Badge: React.FC<BadgeProps> = ({ text, Icon = MoveUp, className = "" }) => {
+const Badge: React.FC<BadgeProps> = ({ text, Icon, className = "" }) => {
   return (
     <div className={`${className} flex w-fit items-center px-2 py-1 text-[15px] rounded-full`}>
-      <Icon className="w-[15px] h-[15px]" />
+      {Icon ? (<Icon className="w-[15px] h-[15px]" />) : ""}
       {text}
     </div>
   );
