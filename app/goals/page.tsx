@@ -1,13 +1,13 @@
 import Boutton from "@/components/Boutton";
+import ChartOverview from "@/components/ChartOverview";
 import GoalsCard from "@/components/GoalsCard";
 import GoalsTotal from "@/components/GoalsTotal";
 import ModeToggleMobile from "@/components/ModeToggleMobile";
 import NavBar from "@/components/Navbar/NavBar";
 import NavBarMobile from "@/components/Navbar/NavBarMobile";
 import Profil from "@/components/Profil";
-import Transactions2 from "@/components/Transactions2";
 import {
-    ArrowUpDown,
+  ArrowUpDown,
   Bell,
   CalendarDays,
   ChevronDown,
@@ -100,11 +100,23 @@ const page = () => {
               />
             </div>
           </div>
-            <div className="w-full">
+          <div className="w-full">
             <GoalsCard />
+          </div>
+          <div className="my-5 w-full flex flex-col gap-4">
+            <div className="w-full">
+              <GoalsTotal
+                title={"Total goals"}
+                number={"25"}
+                notStarted={"3"}
+                inProgress={"4"}
+                canceled={"2"}
+                finished={"16"}
+              />
             </div>
-          <div className="my-5 w-full">
-            <GoalsTotal title={""} number={""} notStarted={""} inProgress={""} canceled={""} finished={""} />
+            <div className="w-full">
+              <ChartOverview />
+            </div>
           </div>
         </div>
       </div>

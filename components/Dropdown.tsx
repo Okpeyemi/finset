@@ -13,13 +13,14 @@ type DropdownProps = {
     text1?: string;
     text2?: string;
     text3?: string;
+    className?: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ title, text1, text2, text3 }) => {
+const Dropdown: React.FC<DropdownProps> = ({ title, text1, text2, text3, className }) => {
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
-            <div className="flex cursor-pointer border border-border px-3 py-1 rounded-[10px] max-sm:items-center">
+            <div className={`flex cursor-pointer border border-border px-3 py-1 rounded-[10px] max-sm:items-center ${className}`}>
                 <h6 className="mr-1 max-sm:text-[13px]">{title}</h6>
                 <ChevronDown className="max-sm:w-4 max-sm:h-4" />
             </div>

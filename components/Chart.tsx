@@ -42,7 +42,7 @@ const Chart = () => {
       <div className="w-full overflow-x-auto">
       <ChartContainer
         config={chartConfig}
-        className="max-h-[300px] max-md:max-h-[200px] w-full font-lufgaRegular max-sm:w-[700px]"
+        className="max-h-[400px] max-md:max-h-[200px] w-full font-lufgaRegular max-sm:w-[700px]"
       >
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
